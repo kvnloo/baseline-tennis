@@ -1,0 +1,22 @@
+{
+  "status": "generated-experimental-not-canonical",
+  "source": "assets/tennis-ball/source/uv-glow-4mp-seed-5101.png",
+  "dimensions": [2048, 2048],
+  "bytes": 5379207,
+  "sha256": "ed596187794429644d0d8c4ed809307fa1bfe7fb939a7b07a89dd846478e3b8b",
+  "generator": "local ComfyUI FLUX.2 Klein Base 4B FP8",
+  "workflow": "/mnt/zer0models/comfyui/user/default/workflows/wooloo-flux2-klein-edit-api.json",
+  "workflowSha256": "7cbe99d87e2b1d892f71fc1129b90bf73e4e100477f251c5cb18d811e035dfbb",
+  "promptId": "b68b3064-3aad-45e5-a5b8-186909f99ce4",
+  "seed": 5101,
+  "targetMegapixels": 4.0,
+  "visualQa": {
+    "sphere": "pass",
+    "feltMicrotexture": "pass",
+    "fluorescence": "pass-with-reservation",
+    "backgroundAndCrop": "pass",
+    "identityPreservation": "pass-relative-to-day-source",
+    "canonicalDarkModeReplacement": false,
+    "reason": "High-quality physically plausible UV counterpart with strong fibers and volume, but the camera orientation shows one dominant seam curve rather than the full recognizable two-lobed seam silhouette, and the upper hemisphere is more uniformly luminous than desired. Preserve as experimental source; production keeps the restrained halo derivative of the canonical daytime plate."
+  }
+}
