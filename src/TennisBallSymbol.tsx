@@ -15,6 +15,8 @@ export function TennisBallSymbol({
   className = '',
   label,
 }: Props) {
+  const assetMode = glow ? 'glow' : 'day'
+
   return (
     <span
       className={`tennis-ball tennis-ball--${size} tennis-ball--${motion} ${glow ? 'tennis-ball--glow' : ''} ${className}`}
@@ -24,8 +26,8 @@ export function TennisBallSymbol({
     >
       <span className="tennis-ball__shadow" />
       <img
-        src="./tennis-ball/tennis-ball-day-256.webp"
-        srcSet="./tennis-ball/tennis-ball-day-256.webp 256w, ./tennis-ball/tennis-ball-day-512.webp 512w, ./tennis-ball/tennis-ball-day-1024.webp 1024w"
+        src={`./tennis-ball/tennis-ball-${assetMode}-256.webp`}
+        srcSet={`./tennis-ball/tennis-ball-${assetMode}-256.webp 256w, ./tennis-ball/tennis-ball-${assetMode}-512.webp 512w, ./tennis-ball/tennis-ball-${assetMode}-1024.webp 1024w`}
         sizes={size === 'hero' ? '(max-width: 600px) 104px, 168px' : '64px'}
         alt=""
         draggable={false}

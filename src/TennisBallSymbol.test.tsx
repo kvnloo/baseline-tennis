@@ -11,8 +11,8 @@ describe('TennisBallSymbol', () => {
     const image = symbol.querySelector('img')
 
     expect(symbol.className).toContain('tennis-ball--bounce')
-    expect(image?.getAttribute('src')).toContain('tennis-ball-day-256.webp')
-    expect(image?.getAttribute('srcset')).toContain('tennis-ball-day-1024.webp 1024w')
+    expect(image?.getAttribute('src')).toContain('tennis-ball-glow-256.webp')
+    expect(image?.getAttribute('srcset')).toContain('tennis-ball-glow-1024.webp 1024w')
     expect(image?.getAttribute('src')).not.toContain('8192')
   })
 
