@@ -12,6 +12,10 @@ dist
 dist-ssr
 *.local
 
+# Reproducible local lossless masters (487 MB); generated web derivatives are tracked.
+artifacts/
+__pycache__/
+
 # Editor directories and files
 .vscode/*
 !.vscode/extensions.json

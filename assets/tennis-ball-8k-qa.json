@@ -1,0 +1,419 @@
+{
+  "accepted": true,
+  "masterSize": [
+    8192,
+    8192
+  ],
+  "maps": {
+    "albedo": {
+      "dimensions": [
+        8192,
+        8192
+      ],
+      "sha256": "5e6d936750783a8324fae58b8c292b2e2f7eb7ebfa7b8e80b05de06532f60d6e",
+      "allTilesExact": true,
+      "tiles": [
+        {
+          "tile": "albedo-r1c1-2048.png",
+          "exact": true,
+          "sha256": "fd631f35272c5a4474ff89238fab25b07f9f9f8df8cacf332a7ca17b0ac41fec"
+        },
+        {
+          "tile": "albedo-r1c2-2048.png",
+          "exact": true,
+          "sha256": "fe95f17e6db61e67263c7c651bb5cc0d7437adbc465be7566ec8c2163dff449d"
+        },
+        {
+          "tile": "albedo-r1c3-2048.png",
+          "exact": true,
+          "sha256": "e7e4bbf57c9704768c753a4c6c81b9a574badc3eac34587212906d9ec891e8a3"
+        },
+        {
+          "tile": "albedo-r1c4-2048.png",
+          "exact": true,
+          "sha256": "b4aa747a90ce263d0f733d1b7e71f608f758b7a85927ce3a814822b4a547bcc5"
+        },
+        {
+          "tile": "albedo-r2c1-2048.png",
+          "exact": true,
+          "sha256": "abe1ada66ab644eab8e0f80a70c70c9157a86e166fd934e44309289e13af7ab6"
+        },
+        {
+          "tile": "albedo-r2c2-2048.png",
+          "exact": true,
+          "sha256": "d7c72fc9355039bc932f7f03f0834dc1d9bf1c3e82ba596336421f81f886f59e"
+        },
+        {
+          "tile": "albedo-r2c3-2048.png",
+          "exact": true,
+          "sha256": "0ee0e7c21aa406face90e2a322d86df8d740d889f96633b7eee5797a2c1718e6"
+        },
+        {
+          "tile": "albedo-r2c4-2048.png",
+          "exact": true,
+          "sha256": "2a85c7c75e806b1aec764cad59f12ae11250a95fc612f9898882a897c9588bd7"
+        },
+        {
+          "tile": "albedo-r3c1-2048.png",
+          "exact": true,
+          "sha256": "e1ff2224cfa6b987ac1470e324d0a99074ebf5c07ac037d2a02a77636e5a2ecb"
+        },
+        {
+          "tile": "albedo-r3c2-2048.png",
+          "exact": true,
+          "sha256": "c9b82e757a9675abee4e49e7628467e4d6c3e4bfbfab60f2554243f61c33a435"
+        },
+        {
+          "tile": "albedo-r3c3-2048.png",
+          "exact": true,
+          "sha256": "1387871f89cec7c71a19562f893b8ba82c2eb65248e2d4cabd7b980fe754da7f"
+        },
+        {
+          "tile": "albedo-r3c4-2048.png",
+          "exact": true,
+          "sha256": "4d7a0ced8d04967883b162308278e47dce3a91377dc23c592ad8c14dda3475e3"
+        },
+        {
+          "tile": "albedo-r4c1-2048.png",
+          "exact": true,
+          "sha256": "2a5511d9154e2449fe11309a0cbe978bbba17e9ff0efff04fc3353b4f9fa27fa"
+        },
+        {
+          "tile": "albedo-r4c2-2048.png",
+          "exact": true,
+          "sha256": "bee3c06562a99bfdfa56f09df39e970918d3679bd938072d904520910148831f"
+        },
+        {
+          "tile": "albedo-r4c3-2048.png",
+          "exact": true,
+          "sha256": "e6503e31c932023286365bd94d0987d6c675b43487f9c76d9ca094d5e38138e5"
+        },
+        {
+          "tile": "albedo-r4c4-2048.png",
+          "exact": true,
+          "sha256": "f1985c886183619ef5bd6d6d7ec8aecc4a9f8b83d629fee3c479f9b333a873f5"
+        }
+      ]
+    },
+    "normal": {
+      "dimensions": [
+        8192,
+        8192
+      ],
+      "sha256": "ed034303791170d7c5ecb9614db6d188c8f29a61a4cc71282de335f8d14154bd",
+      "allTilesExact": true,
+      "tiles": [
+        {
+          "tile": "normal-r1c1-2048.png",
+          "exact": true,
+          "sha256": "57ee4a7d0a480ead86f8a9800040f9aa6c3a7cec94dce740228cdcdc0b53b9c3"
+        },
+        {
+          "tile": "normal-r1c2-2048.png",
+          "exact": true,
+          "sha256": "76ab5cd6084292540f0d0f36897ad3cf83d1be6b8658ac83f04f6acf8ccc2c41"
+        },
+        {
+          "tile": "normal-r1c3-2048.png",
+          "exact": true,
+          "sha256": "fae5f4537871c0dc6fc62ea821ef7080d4411cfdb735c0b10af0a25fc700d777"
+        },
+        {
+          "tile": "normal-r1c4-2048.png",
+          "exact": true,
+          "sha256": "4fd77d0e0b4bbc4198b5a6f268728b5c79e76e2ce91ad85edcb336b742a27382"
+        },
+        {
+          "tile": "normal-r2c1-2048.png",
+          "exact": true,
+          "sha256": "04c19cf7686a26b192a5fb06ee1c03ddf0af8d5912d96205b51ede30bcc884ed"
+        },
+        {
+          "tile": "normal-r2c2-2048.png",
+          "exact": true,
+          "sha256": "4459288e4f896d4f1f2b4cadf77c36e5778cbc0a3ae254ce6a403120e7c4b39e"
+        },
+        {
+          "tile": "normal-r2c3-2048.png",
+          "exact": true,
+          "sha256": "3fb710b2901bac14cfbf0c6de823775f5c44a1192b4ba4ebc52b8bcae142a117"
+        },
+        {
+          "tile": "normal-r2c4-2048.png",
+          "exact": true,
+          "sha256": "fa4c6be4ef997209042781bcaeadfc99479fbfb2f01d19b1e6472be1767c098f"
+        },
+        {
+          "tile": "normal-r3c1-2048.png",
+          "exact": true,
+          "sha256": "fc9eaae92a52e69bf8544c8540336e091d40229bda7b8d7f5741be43ef6c13af"
+        },
+        {
+          "tile": "normal-r3c2-2048.png",
+          "exact": true,
+          "sha256": "08365ea65f050c6c987c694bf391a7632852f986da486f58ba0d681e0e41f42a"
+        },
+        {
+          "tile": "normal-r3c3-2048.png",
+          "exact": true,
+          "sha256": "caf3680d5e1abbfe6f816feceba2705aab0773cfb46deb38bb6d1460169f1082"
+        },
+        {
+          "tile": "normal-r3c4-2048.png",
+          "exact": true,
+          "sha256": "ec36a2ee6fede58f30d9533deb45aa658b378ecae6d1179dfea9e717a71c49b4"
+        },
+        {
+          "tile": "normal-r4c1-2048.png",
+          "exact": true,
+          "sha256": "c6356d77e891c4cb484bc9a43a4aefa019f4c7a01e11e80c62e7e293d01d7349"
+        },
+        {
+          "tile": "normal-r4c2-2048.png",
+          "exact": true,
+          "sha256": "62a18e0292586767fff89cc3cdb5b7059d8a2664c781f3a5721f737ecb3033b1"
+        },
+        {
+          "tile": "normal-r4c3-2048.png",
+          "exact": true,
+          "sha256": "fbdfad8aecf68adbfcfd7fe15d85e3cea0c8a149c1989a688de3dff9da5ca116"
+        },
+        {
+          "tile": "normal-r4c4-2048.png",
+          "exact": true,
+          "sha256": "a549dca61e53c465e93d65ce1812669741aa71c61c419ca614a86815b46d1e11"
+        }
+      ]
+    },
+    "roughness": {
+      "dimensions": [
+        8192,
+        8192
+      ],
+      "sha256": "c4012404ef36c16cb622a549d67cdbb3481dfcefba476f0bd2b0c7a8d62a04c7",
+      "allTilesExact": true,
+      "tiles": [
+        {
+          "tile": "roughness-r1c1-2048.png",
+          "exact": true,
+          "sha256": "8f10334c7bbcac60e8b27f525104b5bde895469d20f286af190bcf74d88f64ef"
+        },
+        {
+          "tile": "roughness-r1c2-2048.png",
+          "exact": true,
+          "sha256": "97b0c0f8e36a519940f0683849383ec9099a9549ce0b8d7f2ef17c34161c4823"
+        },
+        {
+          "tile": "roughness-r1c3-2048.png",
+          "exact": true,
+          "sha256": "19aed43360d5caa1858b470bba7cc7d244f94a309c14436f881a9e757ed306bd"
+        },
+        {
+          "tile": "roughness-r1c4-2048.png",
+          "exact": true,
+          "sha256": "ab1d38985598889fcb46ca2f3b88700de5e98043e997d5157a8fff0a8d43f857"
+        },
+        {
+          "tile": "roughness-r2c1-2048.png",
+          "exact": true,
+          "sha256": "a34eb31d93951cd4ba9e5079ec87025fbbf87f26596dfc85af2ecb8e651efe23"
+        },
+        {
+          "tile": "roughness-r2c2-2048.png",
+          "exact": true,
+          "sha256": "a9a2c03750e9853ea5be279f9fb4bd62004575e6d7fda1c1b92472dde2c9799a"
+        },
+        {
+          "tile": "roughness-r2c3-2048.png",
+          "exact": true,
+          "sha256": "72cbb4e34517a737601a7ddfe6cc94c656426e5d23474214a1487dc681fb72e2"
+        },
+        {
+          "tile": "roughness-r2c4-2048.png",
+          "exact": true,
+          "sha256": "2a1c9c928e669b30860bf75b89215dd0c303de8c0e2faacce6e951a786679d6a"
+        },
+        {
+          "tile": "roughness-r3c1-2048.png",
+          "exact": true,
+          "sha256": "a34b048b825ac81bde82c24430510df43af1670931b5c9f6ea1932ca3898bc28"
+        },
+        {
+          "tile": "roughness-r3c2-2048.png",
+          "exact": true,
+          "sha256": "1575da553ad16a0f8983d60c11d70a4ea405f0f14c2b65cb1824608879d8da2f"
+        },
+        {
+          "tile": "roughness-r3c3-2048.png",
+          "exact": true,
+          "sha256": "be09000d41c92d356577fd807572d28e75f2883d92595678de5cf68832807db8"
+        },
+        {
+          "tile": "roughness-r3c4-2048.png",
+          "exact": true,
+          "sha256": "f8b29e5348438a9eb3771a33b42dd3d51aedb8b551fe7f126bab18b57f987f9c"
+        },
+        {
+          "tile": "roughness-r4c1-2048.png",
+          "exact": true,
+          "sha256": "fb13cf96a5321e70b4e0361875873378bc0522b5f7ff95c5f23733bc75dd3da0"
+        },
+        {
+          "tile": "roughness-r4c2-2048.png",
+          "exact": true,
+          "sha256": "49c2c087932aca00fe2183a34353b65188e53d6d7c3e34ae304af1169c1b7fe4"
+        },
+        {
+          "tile": "roughness-r4c3-2048.png",
+          "exact": true,
+          "sha256": "828e49fbb2c5c1f64c613ecaa493129397c346b7e867922604d21387538c55ae"
+        },
+        {
+          "tile": "roughness-r4c4-2048.png",
+          "exact": true,
+          "sha256": "e776310e1f564ead53e38390d87e84af184e7f88c3baefdaa3b7261387a7a309"
+        }
+      ]
+    },
+    "emissive-mask": {
+      "dimensions": [
+        8192,
+        8192
+      ],
+      "sha256": "8c560416bdf444e728a4a208df302e3a02657c37a99b5bff5f8c953ab25ef04c",
+      "allTilesExact": true,
+      "tiles": [
+        {
+          "tile": "emissive-mask-r1c1-2048.png",
+          "exact": true,
+          "sha256": "8685774c2ccf2144a127e1dbea53d950ec9ab824a6db5f5cf00d1537682fee63"
+        },
+        {
+          "tile": "emissive-mask-r1c2-2048.png",
+          "exact": true,
+          "sha256": "818cbf139227614dbe5935062cdd9d9c1991be32a084e42a53bf4f00591fb517"
+        },
+        {
+          "tile": "emissive-mask-r1c3-2048.png",
+          "exact": true,
+          "sha256": "d03908ddcfa2d53e841083548a0a9627e7510c238f668b2c604a35a23e45bc68"
+        },
+        {
+          "tile": "emissive-mask-r1c4-2048.png",
+          "exact": true,
+          "sha256": "516a32ca4a60830150cfbaf0c3df863041ec0481525f8f82603ac2005f8732a5"
+        },
+        {
+          "tile": "emissive-mask-r2c1-2048.png",
+          "exact": true,
+          "sha256": "dbbbb274ab6ba4486ab392ba3e36b3d95c8680d21cd0586f3d952b76c77f473c"
+        },
+        {
+          "tile": "emissive-mask-r2c2-2048.png",
+          "exact": true,
+          "sha256": "1578103f43e1dcc5288bd67c112fc4ecd8ece2de7e721b6b83db62cbc80705dd"
+        },
+        {
+          "tile": "emissive-mask-r2c3-2048.png",
+          "exact": true,
+          "sha256": "2e009ff685e581df487a869567f7cde3bdb69f2f4689be16c15a0096f7dfbd82"
+        },
+        {
+          "tile": "emissive-mask-r2c4-2048.png",
+          "exact": true,
+          "sha256": "c74adbbbf570e92c46168f1f540e78f17e0b760bec6fccc9a2998a8e688b3178"
+        },
+        {
+          "tile": "emissive-mask-r3c1-2048.png",
+          "exact": true,
+          "sha256": "1fbd12ad576caaf308a73e9531a1a090d0809e35cf5b9a6000bece8f1cd00bf2"
+        },
+        {
+          "tile": "emissive-mask-r3c2-2048.png",
+          "exact": true,
+          "sha256": "86281d2c978218ceb67105046cdf6dcef22c1a041e638e2d1581aeed0f8886d7"
+        },
+        {
+          "tile": "emissive-mask-r3c3-2048.png",
+          "exact": true,
+          "sha256": "d20034f4f1c4fc5038fbc214cfa94c67102758e67ff34a0bf9cf7504b973d853"
+        },
+        {
+          "tile": "emissive-mask-r3c4-2048.png",
+          "exact": true,
+          "sha256": "77a59b4c3fb4c3741263604fa16f7b35427cd386e85cb47bca0c8119fbde038a"
+        },
+        {
+          "tile": "emissive-mask-r4c1-2048.png",
+          "exact": true,
+          "sha256": "d2e0aae9fd8fd5a6cf24749aa1cc95ad893155d15e4db2e071726a11c259a75d"
+        },
+        {
+          "tile": "emissive-mask-r4c2-2048.png",
+          "exact": true,
+          "sha256": "339071f34315bdc952b05d805f9dd87c46ef0e2d13e7eb2fba9950b867dbc714"
+        },
+        {
+          "tile": "emissive-mask-r4c3-2048.png",
+          "exact": true,
+          "sha256": "07230a47b4761bf2bd3ecedfd27150c366780a44478cef4f0432f083e49f2794"
+        },
+        {
+          "tile": "emissive-mask-r4c4-2048.png",
+          "exact": true,
+          "sha256": "a3b1fc7f9934c3ec34278666fed803e8c184f6ff24b55e1e059e4d3bd58bad0b"
+        }
+      ]
+    }
+  },
+  "derivatives": {
+    "tennis-ball-day-1024.webp": {
+      "dimensions": [
+        1024,
+        1024
+      ],
+      "sha256": "8477baba8d475bfa6164d4a89c352cb46d2f8300d23dadb57c8bcbdbdea7bbaf",
+      "bytes": 491568
+    },
+    "tennis-ball-day-256.webp": {
+      "dimensions": [
+        256,
+        256
+      ],
+      "sha256": "c38c0e191f25e554250ec3976d45d0aa78644356df25fa918a68ceb3e73a86b0",
+      "bytes": 32124
+    },
+    "tennis-ball-day-512.webp": {
+      "dimensions": [
+        512,
+        512
+      ],
+      "sha256": "95acb042f3b4b2316e20ba26a53e083ca12425a945a5350a9eeb1e81060294a8",
+      "bytes": 150754
+    },
+    "tennis-ball-glow-1024.webp": {
+      "dimensions": [
+        1024,
+        1024
+      ],
+      "sha256": "86877accabc0f6b2b7606d66ae482b81bf8540619e4e14b5e4e6e3e823dd8693",
+      "bytes": 521548
+    },
+    "tennis-ball-glow-256.webp": {
+      "dimensions": [
+        256,
+        256
+      ],
+      "sha256": "6ab7d0b84b1a3c2e6a278758dee2b18b9c847e12407f83c67755b09674dda67b",
+      "bytes": 41290
+    },
+    "tennis-ball-glow-512.webp": {
+      "dimensions": [
+        512,
+        512
+      ],
+      "sha256": "b27aa642560fd35aa92d11f8975305a6c21453eb5d2533bb9ba913e5d7dc2bbf",
+      "bytes": 170238
+    }
+  }
+}
