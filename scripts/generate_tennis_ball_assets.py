@@ -1,9 +1,10 @@
 #!/usr/bin/env python3
-"""Deterministically author native 8K tennis-ball PBR masters and web sprites.
+"""Author archived procedural PBR masters and approved photoreal web sprites.
 
-The master follows the Temple Guard exact-grid method: 16 independently
-rendered 2048 px tiles, stitched as a lossless, non-overlapping 4 x 4 atlas.
-No neural upscaling or resampling is used to create the 8192 px masters.
+The 8192 px PBR maps preserve the earlier exact-grid experiment, but they are
+not the visible identity source. Runtime sprites derive from the reviewed local
+FLUX.2 Klein plate in ``assets/tennis-ball/source``; no native-8K claim is made
+for that plate.
 """
 from __future__ import annotations
 
@@ -12,11 +13,12 @@ import json
 from pathlib import Path
 
 import numpy as np
-from PIL import Image, ImageDraw, ImageFilter
+from PIL import Image, ImageFilter
 
 ROOT = Path(__file__).resolve().parents[1]
 MASTER = ROOT / "artifacts" / "tennis-ball-8k"
 WEB = ROOT / "public" / "tennis-ball"
+PHOTO_SOURCE = ROOT / "assets" / "tennis-ball" / "source" / "photoreal-source-seed-4101.png"
 SIZE = 8192
 TILE = 2048
 SEED = 1987
@@ -86,45 +88,31 @@ def generate_masters() -> dict[str, dict[str, object]]:
 
 
 def render_sprite(size: int, glow: bool = False) -> Image.Image:
-    scale = 4
-    s = size * scale
-    yy, xx = np.mgrid[0:s, 0:s]
-    cx = cy = (s-1)/2
-    radius = s * .44
-    nx = (xx-cx)/radius
-    ny = (yy-cy)/radius
-    r2 = nx*nx + ny*ny
-    mask = r2 <= 1
-    nz = np.sqrt(np.clip(1-r2, 0, 1))
-    # Directional studio light plus authentic high-frequency felt.
-    light = np.clip(nx * -.38 + ny * -.48 + nz * .82, 0, 1)
-    fuzz = field(xx * (SIZE/s), yy * (SIZE/s))
-    tone = np.clip(.48 + light*.54 + fuzz*.038, .14, 1.08)
-    base = np.array([190, 222, 45], dtype=np.float32)
-    rgb = np.clip(base[None,None,:] * tone[...,None], 0, 255).astype(np.uint8)
-    rgba = np.zeros((s,s,4), dtype=np.uint8)
-    rgba[...,:3] = rgb
-    rgba[...,3] = np.where(mask, 255, 0).astype(np.uint8)
-    ball = Image.fromarray(rgba, "RGBA")
+    """Cut the approved photoreal plate from black and preserve its fuzzy edge."""
+    source = Image.open(PHOTO_SOURCE).convert("RGB")
+    rgb = np.asarray(source, dtype=np.float32)
+    height, width = rgb.shape[:2]
+    yy, xx = np.mgrid[0:height, 0:width]
+    cx, cy = (width - 1) / 2, (height - 1) / 2
+    radial = np.sqrt(((xx - cx) / width) ** 2 + ((yy - cy) / height) ** 2)
 
-    # Tennis seam: two mirrored smooth arcs, clipped by the ball silhouette.
-    seam = Image.new("RGBA", (s,s), (0,0,0,0))
-    d = ImageDraw.Draw(seam)
-    width = max(4, int(s*.018))
-    color = (241, 245, 214, 235)
-    bbox = (int(s*.13), int(s*.05), int(s*.87), int(s*.94))
-    d.arc(bbox, -67, 67, fill=color, width=width)
-    d.arc(bbox, 113, 247, fill=color, width=width)
-    seam.putalpha(Image.composite(seam.getchannel("A"), Image.new("L",(s,s),0), ball.getchannel("A")))
-    ball = Image.alpha_composite(ball, seam)
+    # The opaque core keeps naturally shadowed felt solid. Outside it, luminance
+    # isolates the back-lit loose fibers from the true black studio background.
+    luminance = rgb.max(axis=2)
+    fiber_alpha = np.clip((luminance - 2.0) / 24.0, 0, 1)
+    outer_fade = np.clip((0.49 - radial) / 0.025, 0, 1)
+    alpha = np.where(radial <= 0.425, 1.0, fiber_alpha * outer_fade)
+    alpha = Image.fromarray((alpha * 255).astype(np.uint8), "L").filter(ImageFilter.GaussianBlur(0.35))
 
+    ball = source.convert("RGBA")
+    ball.putalpha(alpha)
     if glow:
-        halo = Image.new("RGBA", (s,s), (0,0,0,0))
-        halo_alpha = ball.getchannel("A").filter(ImageFilter.GaussianBlur(s*.055)).point(lambda p: int(p*.18))
-        halo.paste((176,232,42,0), (0,0,s,s))
+        halo = Image.new("RGBA", source.size, (0, 0, 0, 0))
+        halo_alpha = alpha.filter(ImageFilter.GaussianBlur(width * .038)).point(lambda p: int(p * .16))
+        halo.paste((176, 232, 42, 0), (0, 0, width, height))
         halo.putalpha(halo_alpha)
         ball = Image.alpha_composite(halo, ball)
-    return ball.resize((size,size), Image.Resampling.LANCZOS)
+    return ball.resize((size, size), Image.Resampling.LANCZOS)
 
 
 def generate_web() -> dict[str, dict[str, object]]:
@@ -141,10 +129,17 @@ def generate_web() -> dict[str, dict[str, object]]:
 def main() -> None:
     MASTER.mkdir(parents=True, exist_ok=True)
     manifest = {
-        "method": "native deterministic 4x4 grid; 16 exact non-overlapping 2048px tiles; lossless PNG stitch",
+        "method": "archived deterministic 4x4 PBR experiment; not the visible identity source",
         "sourceSize": [SIZE, SIZE],
         "seed": SEED,
         "masters": generate_masters(),
+        "visibleSource": {
+            "path": str(PHOTO_SOURCE.relative_to(ROOT)),
+            "width": 1024,
+            "height": 1024,
+            "sha256": sha(PHOTO_SOURCE),
+            "type": "locally generated photoreal plate; not a photograph, scan, or native 8K source",
+        },
         "webDerivatives": generate_web(),
     }
     path = MASTER / "manifest.json"

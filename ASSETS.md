@@ -2,31 +2,26 @@
 
 Baseline uses one reusable textured tennis-ball symbol in navigation, the hero, map legend, statistical reports, and action controls.
 
-## Canonical source
+## Canonical visible source
 
-The source material is generated at a true **8192 × 8192** resolution by `scripts/generate_tennis_ball_assets.py`.
+The shipped symbol is derived from `assets/tennis-ball/source/photoreal-source-seed-4101.png`, a **1024 × 1024 locally generated photoreal plate** made with FLUX.2 Klein. It was selected for visible felt fibers, fuzzy silhouette, recessed off-white seam, spherical lighting, and legibility at icon sizes.
 
-It follows the same exact-grid method used for the Temple Guard detail master:
+The plate is not represented as a photograph, scan, CC0 library asset, or native 8K capture. Its SHA-256 is:
 
-1. Render sixteen native 2048 × 2048 tiles in a strict 4 × 4 grid.
-2. Preserve every tile losslessly as PNG.
-3. Stitch tiles with exact non-overlapping boundaries.
-4. Produce independent albedo, normal, roughness, and emissive-mask masters.
-5. Record dimensions and SHA-256 receipts in `assets/tennis-ball-8k-manifest.json`.
-6. Derive lossless 1024, 512, and 256 WebP UI sprites from the high-resolution source.
-
-There is no neural upscaling, fake super-resolution, overlap, feathering, or collage reconstruction.
-
-## Repository boundary
-
-The reproducible lossless masters and 64 source tiles occupy approximately 487 MB and remain under ignored `artifacts/tennis-ball-8k/`. The deterministic generator, hash manifest, and optimized web derivatives are tracked. Run:
-
-```bash
-python scripts/generate_tennis_ball_assets.py
+```text
+56c81be91ecd708b63931cf29917cf1bb6627863b7b1d776e961d2588f47bd89
 ```
+
+`scripts/generate_tennis_ball_assets.py` removes the black studio background while preserving loose edge fibers, then produces lossless 1024, 512, and 256 WebP derivatives. Browsers load those optimized derivatives.
+
+## Archived procedural experiment
+
+`artifacts/tennis-ball-8k/` contains the earlier deterministic 8192 × 8192 tiled PBR experiment. It failed the visual realism gate and is **not** the canonical visible identity source. The repository retains its generator and receipts only as reproducible process evidence; its 487 MB outputs remain ignored.
+
+No native, rights-safe 8K photographic tennis-ball material was found in Poly Haven, ambientCG, Blendkit, or OpenGameArt. Baseline therefore makes no claim that the shipped photoreal plate is a native 8K source.
 
 ## Runtime motion
 
-`src/TennisBallSymbol.tsx` provides five sizes and three motion modes. The hero ball uses a squash/stretch rebound with a synchronized contact shadow. Small instances use restrained hover lift. Dark surfaces add two low-opacity drop-shadow halos rather than shipping the emissive 8K map to browsers.
+`src/TennisBallSymbol.tsx` provides five sizes and three motion modes. The hero ball uses a squash/stretch rebound with a synchronized contact shadow. Small instances use restrained hover lift. Dark surfaces add low-opacity halos without erasing the felt texture.
 
 `prefers-reduced-motion: reduce` disables the rebound and shadow animation.

@@ -1,10 +1,9 @@
 {
-  "method": "native deterministic 4x4 grid; 16 exact non-overlapping 2048px tiles; lossless PNG stitch",
-  "sourceSize": [
-    8192,
-    8192
-  ],
+  "status": "archived-failed-visual-realism-gate",
+  "method": "deterministic 4x4 grid; 16 exact non-overlapping 2048px tiles; lossless PNG stitch",
+  "sourceSize": [8192, 8192],
   "seed": 1987,
+  "canonicalVisibleIdentity": false,
   "masters": {
     "albedo": {
       "path": "artifacts/tennis-ball-8k/tennis-ball-albedo-8192.png",
@@ -29,50 +28,6 @@
       "width": 8192,
       "height": 8192,
       "sha256": "8c560416bdf444e728a4a208df302e3a02657c37a99b5bff5f8c953ab25ef04c"
-    }
-  },
-  "webDerivatives": {
-    "day-1024": {
-      "path": "public/tennis-ball/tennis-ball-day-1024.webp",
-      "width": 1024,
-      "height": 1024,
-      "sha256": "8477baba8d475bfa6164d4a89c352cb46d2f8300d23dadb57c8bcbdbdea7bbaf",
-      "bytes": 491568
-    },
-    "glow-1024": {
-      "path": "public/tennis-ball/tennis-ball-glow-1024.webp",
-      "width": 1024,
-      "height": 1024,
-      "sha256": "86877accabc0f6b2b7606d66ae482b81bf8540619e4e14b5e4e6e3e823dd8693",
-      "bytes": 521548
-    },
-    "day-512": {
-      "path": "public/tennis-ball/tennis-ball-day-512.webp",
-      "width": 512,
-      "height": 512,
-      "sha256": "95acb042f3b4b2316e20ba26a53e083ca12425a945a5350a9eeb1e81060294a8",
-      "bytes": 150754
-    },
-    "glow-512": {
-      "path": "public/tennis-ball/tennis-ball-glow-512.webp",
-      "width": 512,
-      "height": 512,
-      "sha256": "b27aa642560fd35aa92d11f8975305a6c21453eb5d2533bb9ba913e5d7dc2bbf",
-      "bytes": 170238
-    },
-    "day-256": {
-      "path": "public/tennis-ball/tennis-ball-day-256.webp",
-      "width": 256,
-      "height": 256,
-      "sha256": "c38c0e191f25e554250ec3976d45d0aa78644356df25fa918a68ceb3e73a86b0",
-      "bytes": 32124
-    },
-    "glow-256": {
-      "path": "public/tennis-ball/tennis-ball-glow-256.webp",
-      "width": 256,
-      "height": 256,
-      "sha256": "6ab7d0b84b1a3c2e6a278758dee2b18b9c847e12407f83c67755b09674dda67b",
-      "bytes": 41290
     }
   }
 }

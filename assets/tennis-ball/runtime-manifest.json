@@ -1,0 +1,51 @@
+{
+  "canonicalSource": "assets/tennis-ball/source/photoreal-source-seed-4101.png",
+  "sourceWidth": 1024,
+  "sourceHeight": 1024,
+  "sourceSha256": "56c81be91ecd708b63931cf29917cf1bb6627863b7b1d776e961d2588f47bd89",
+  "sourceType": "locally generated photoreal plate; not a photograph, scan, or native 8K source",
+  "webDerivatives": {
+    "day-1024": {
+      "path": "public/tennis-ball/tennis-ball-day-1024.webp",
+      "width": 1024,
+      "height": 1024,
+      "sha256": "4d75fb683a9e30584e9321887151a57bf60666358cb108dac7c928a6e8d4c686",
+      "bytes": 1194814
+    },
+    "glow-1024": {
+      "path": "public/tennis-ball/tennis-ball-glow-1024.webp",
+      "width": 1024,
+      "height": 1024,
+      "sha256": "7a983949fbfbf330e0e81c5aaec6a17a663b01444940ddef9b5b0dfe540a00f4",
+      "bytes": 1225620
+    },
+    "day-512": {
+      "path": "public/tennis-ball/tennis-ball-day-512.webp",
+      "width": 512,
+      "height": 512,
+      "sha256": "1cc43f0ef675a324f952c103fb38bb11efbf0e7036ca69b8a0a3082833ecf0fb",
+      "bytes": 288522
+    },
+    "glow-512": {
+      "path": "public/tennis-ball/tennis-ball-glow-512.webp",
+      "width": 512,
+      "height": 512,
+      "sha256": "b56c98fd1f80bea5a8f49b200ad63b5a566e7f08817b8dcf4f7e45a7b013b093",
+      "bytes": 316038
+    },
+    "day-256": {
+      "path": "public/tennis-ball/tennis-ball-day-256.webp",
+      "width": 256,
+      "height": 256,
+      "sha256": "8581890ebb4068d8dbbedf6f291e847d0eb9c9142a035727d554dba7da47fdbf",
+      "bytes": 68966
+    },
+    "glow-256": {
+      "path": "public/tennis-ball/tennis-ball-glow-256.webp",
+      "width": 256,
+      "height": 256,
+      "sha256": "191bec4ac4ef2ddf711f108472cb0397a10880ac25a2b373150b2e4f072d6cc3",
+      "bytes": 80910
+    }
+  }
+}

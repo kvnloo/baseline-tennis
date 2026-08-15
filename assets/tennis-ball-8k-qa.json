@@ -1,5 +1,8 @@
 {
   "accepted": true,
+  "acceptanceScope": "dimension, hash, and exact-grid integrity only",
+  "visualRealismAccepted": false,
+  "canonicalVisibleIdentity": false,
   "masterSize": [
     8192,
     8192
