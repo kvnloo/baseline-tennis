@@ -1,0 +1,43 @@
+{
+  "name": "tennis-intelligence",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "data": "python scripts/build_data.py",
+    "dev": "vite",
+    "build": "tsc -b && vite build",
+    "test": "vitest run",
+    "lint": "oxlint",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "@phosphor-icons/react": "^2.1.10",
+    "@tanstack/react-query": "^5.101.4",
+    "arquero": "^8.0.3",
+    "d3-geo": "^3.1.1",
+    "fuse.js": "^7.5.0",
+    "maplibre-gl": "^6.3.0",
+    "motion": "^13.1.0",
+    "react": "^19.2.8",
+    "react-dom": "^19.2.8",
+    "react-map-gl": "^8.1.2",
+    "recharts": "^3.10.1",
+    "topojson-client": "^3.1.0"
+  },
+  "devDependencies": {
+    "@testing-library/jest-dom": "^7.0.1",
+    "@testing-library/react": "^16.3.2",
+    "@types/d3-geo": "^3.1.1",
+    "@types/node": "^24.13.3",
+    "@types/react": "^19.2.17",
+    "@types/react-dom": "^19.2.3",
+    "@types/topojson-client": "^3.1.5",
+    "@vitejs/plugin-react": "^6.0.4",
+    "jsdom": "^30.0.1",
+    "oxlint": "^1.75.0",
+    "typescript": "~6.0.2",
+    "vite": "^8.2.0",
+    "vitest": "^4.1.10"
+  }
+}
