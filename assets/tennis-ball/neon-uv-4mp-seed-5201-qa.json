@@ -1,0 +1,24 @@
+{
+  "status": "accepted-for-web-glow-derivatives",
+  "source": "assets/tennis-ball/source/neon-uv-4mp-seed-5201.png",
+  "dimensions": [2048, 2048],
+  "seed": 5201,
+  "model": "flux-2-klein-base-4b-fp8 via ComfyUI FLUX.2 Klein edit workflow",
+  "references": [
+    "glow-tennis blacklight event photography: optic-yellow felt becomes intense electric chartreuse under 365 nm UV",
+    "UV-induced fluorescence product photography guidance: preserve fiber microtexture, controlled bloom, pure black surround"
+  ],
+  "visualQa": {
+    "silhouette": "pass-near-circular; no upper-right bulge like rejected seed 5101",
+    "fluorescence": "pass-saturated neon yellow-green, brighter than day plate",
+    "felt": "pass-resolved fuzzy fibers",
+    "seam": "conditional-pass-single curved recessed ivory seam, not full two-lobe view",
+    "halo": "pass-controlled photographic bloom",
+    "webDerivatives": "pass-after transparent padding; corners alpha 0; content margin ~10%"
+  },
+  "notes": [
+    "Canonical day identity remains photoreal-source-seed-4101.png",
+    "Glow web sprites now derive from this neon UV plate, not a day-plate tint",
+    "Not a scan, photograph, or native 8K capture"
+  ]
+}

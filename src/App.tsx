@@ -4,7 +4,9 @@ import { ArrowUpRight, ChartBar, GlobeHemisphereWest, MagnifyingGlass } from '@p
 import { AnimatePresence, motion } from 'motion/react'
 import { answerQuestion } from './lib/analytics'
 import type { MatchRecord, StatisticalAnswer, Surface, Tour } from './lib/types'
+import { LiveMatchCenter } from './LiveMatchCenter'
 import { TennisBallSymbol } from './TennisBallSymbol'
+import { ThemeToggle } from './ThemeToggle'
 import { WorldMap } from './WorldMap'
 import './index.css'
 
@@ -32,7 +34,7 @@ function App() {
   return <main className="app-shell">
     <header className="topbar">
       <div className="brand"><span className="brand-mark"><TennisBallSymbol size="sm" motion="hover" label="Baseline tennis ball" /></span><span>Baseline</span><span className="edition">Open tennis atlas</span></div>
-      <nav><button className="nav-active">Explore</button><button>Reports</button><a href="https://github.com/Aneeshers/tennis-sackmann-archive" target="_blank">Data <ArrowUpRight /></a></nav>
+      <nav><button className="nav-active">Explore</button><a href="#live">Live</a><button>Reports</button><a href="https://github.com/Aneeshers/tennis-sackmann-archive" target="_blank">Data <ArrowUpRight /></a><ThemeToggle /></nav>
     </header>
 
     <section className="hero-line">
@@ -45,6 +47,8 @@ function App() {
       <div className="control-group"><span>Surface</span>{(['All', 'Hard', 'Clay', 'Grass'] as const).map((x) => <button key={x} className={surface === x ? 'selected' : ''} onClick={() => setSurface(x)}>{x}</button>)}</div>
       {selectedTournament && <button className="clear-filter" onClick={() => setSelectedTournament(null)}>Clear {selectedTournament}</button>}
     </section>
+
+    <LiveMatchCenter />
 
     <section className="atlas-grid">
       <div className="map-panel">

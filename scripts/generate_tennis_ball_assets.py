@@ -19,6 +19,7 @@ ROOT = Path(__file__).resolve().parents[1]
 MASTER = ROOT / "artifacts" / "tennis-ball-8k"
 WEB = ROOT / "public" / "tennis-ball"
 PHOTO_SOURCE = ROOT / "assets" / "tennis-ball" / "source" / "photoreal-source-seed-4101.png"
+NEON_SOURCE = ROOT / "assets" / "tennis-ball" / "source" / "neon-uv-4mp-seed-5201.png"
 SIZE = 8192
 TILE = 2048
 SEED = 1987
@@ -87,9 +88,9 @@ def generate_masters() -> dict[str, dict[str, object]]:
     return manifest
 
 
-def render_sprite(size: int, glow: bool = False) -> Image.Image:
-    """Cut the approved photoreal plate from black and preserve its fuzzy edge."""
-    source = Image.open(PHOTO_SOURCE).convert("RGB")
+def render_sprite(size: int, source_path: Path = PHOTO_SOURCE, glow: bool = False) -> Image.Image:
+    """Cut a reviewed generated plate from black and preserve its fuzzy edge."""
+    source = Image.open(source_path).convert("RGB")
     rgb = np.asarray(source, dtype=np.float32)
     height, width = rgb.shape[:2]
     yy, xx = np.mgrid[0:height, 0:width]
@@ -108,10 +109,20 @@ def render_sprite(size: int, glow: bool = False) -> Image.Image:
     ball.putalpha(alpha)
     if glow:
         halo = Image.new("RGBA", source.size, (0, 0, 0, 0))
-        halo_alpha = alpha.filter(ImageFilter.GaussianBlur(width * .038)).point(lambda p: int(p * .16))
+        halo_strength = .08 if source_path == NEON_SOURCE else .16
+        halo_alpha = alpha.filter(ImageFilter.GaussianBlur(width * .038)).point(lambda p: int(p * halo_strength))
         halo.paste((176, 232, 42, 0), (0, 0, width, height))
         halo.putalpha(halo_alpha)
         ball = Image.alpha_composite(halo, ball)
+    if source_path == NEON_SOURCE:
+        # The UV macro fills its source plate. Add true transparent breathing room
+        # so neither fluorescent fibers nor the browser halo touch the square edge.
+        scale = .82
+        inset = round(width * (1 - scale) / 2)
+        inner = ball.resize((round(width * scale), round(height * scale)), Image.Resampling.LANCZOS)
+        padded = Image.new("RGBA", source.size, (0, 0, 0, 0))
+        padded.alpha_composite(inner, (inset, inset))
+        ball = padded
     return ball.resize((size, size), Image.Resampling.LANCZOS)
 
 
@@ -121,7 +132,8 @@ def generate_web() -> dict[str, dict[str, object]]:
     for size in (1024, 512, 256):
         for mode in ("day", "glow"):
             path = WEB / f"tennis-ball-{mode}-{size}.webp"
-            render_sprite(size, glow=mode == "glow").save(path, "WEBP", lossless=True, method=6)
+            source = NEON_SOURCE if mode == "glow" else PHOTO_SOURCE
+            render_sprite(size, source_path=source, glow=mode == "glow").save(path, "WEBP", lossless=True, method=6)
             outputs[f"{mode}-{size}"] = {"path": str(path.relative_to(ROOT)), "width": size, "height": size, "sha256": sha(path), "bytes": path.stat().st_size}
     return outputs
 
